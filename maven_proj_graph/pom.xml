@@ -2,12 +2,12 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.mygroup</groupId>
-  <artifactId>deeplearning-bt</artifactId>
+  <groupId>org.testcase</groupId>
+  <artifactId>project-A</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>deeplearning-bt</name>
+  <name>project-A</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -16,33 +16,8 @@
     <canova.version>0.0.0.5</canova.version>
   </properties>
 
-
-         <!-- coordinates in parent pom - actual pom file is in parent folder
-            - this section is in the submodules below -->
-        <parent>
-                <groupId>com.xyz</groupId>
-                <artifactId>multi-app</artifactId>
-                <version>1.0</version>
-        </parent>
-
- 		<!--  defines the submodules 
- 		     this section in submodules only -->
-        <modules>
-                <module>app</module>
-                <module>util</module>
-        </modules>
-
-
-<!--  
-see simple multi module example here
-
-https://github.com/jamesward/maven-multi-module-example/blob/master/pom.xml
-
--->
-
-
   <dependencyManagement>
-    <dependencies>
+    <dependencies>	
       <dependency>
         <groupId>org.nd4j</groupId>
         <artifactId>nd4j-x86</artifactId>
@@ -56,7 +31,18 @@ https://github.com/jamesward/maven-multi-module-example/blob/master/pom.xml
       </dependency>
     </dependencies>
   </dependencyManagement>
+  
+  
   <dependencies>
+  
+  	
+      <dependency>
+        <groupId>org.testcase</groupId>
+        <artifactId>project-B</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+	
+
     <dependency>
       <groupId>org.deeplearning4j</groupId>
       <artifactId>deeplearning4j-ui</artifactId>

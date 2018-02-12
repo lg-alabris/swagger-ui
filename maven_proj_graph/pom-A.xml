@@ -16,6 +16,13 @@
     <canova.version>0.0.0.5</canova.version>
   </properties>
 
+	<modules>
+		<module>sub1</module>
+		<!-- module>sub2</module-->
+	</modules>
+  
+
+
   <dependencyManagement>
     <dependencies>	
       <dependency>
@@ -31,11 +38,10 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
-  
+
   
   <dependencies>
-  
-  	
+   	
       <dependency>
         <groupId>org.testcase</groupId>
         <artifactId>project-B</artifactId>
